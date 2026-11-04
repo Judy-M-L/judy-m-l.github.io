@@ -81,6 +81,16 @@
   .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 14px; }
   .tag { font-size: 12px; color: var(--muted); border: 1px solid var(--line); padding: 2px 8px; border-radius: 999px; }
 
+  details { border-top: 1px solid var(--line); }
+  details:last-of-type { border-bottom: 1px solid var(--line); }
+  summary { cursor: pointer; padding: 14px 0; font-weight: 600; list-style: none; display: flex; gap: 10px; align-items: baseline; }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: "▸"; color: var(--faint); font-weight: 400; }
+  details[open] summary::before { content: "▾"; }
+  summary .sub { font-weight: 400; color: var(--muted); font-size: 14px; }
+  details > :not(summary) { margin-left: 22px; }
+  details > :last-child { margin-bottom: 18px; }
+  .h { color: var(--faint); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; margin: 18px 0 2px; }
   footer { padding: 24px 0 56px; color: var(--muted); font-size: 14px; }
   footer .links { display: flex; gap: 18px; flex-wrap: wrap; }
 
