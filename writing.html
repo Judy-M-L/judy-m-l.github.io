@@ -1,0 +1,17 @@
+---
+layout: default
+title: Writing
+permalink: /writing/
+---
+<h1>Writing</h1>
+<p class="lede">Notes from studying for Security+ and running two small organisations. If I can't explain it with my bakery or my platform, I don't understand it yet.</p>
+
+<div class="label">All posts</div>
+<ul class="list">
+{% for post in site.posts %}
+  <li>
+    <a class="t" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <div class="d">{{ post.date | date: "%b %-d, %Y" }}{% if post.summary %} · {{ post.summary }}{% endif %}</div>
+  </li>
+{% endfor %}
+</ul>

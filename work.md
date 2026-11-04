@@ -27,7 +27,7 @@ Three things I've built and run. Each one taught me something about controls, ri
 
 **What I'd do differently.** I turned on web analytics before updating the operations doc that said "no analytics." I caught it myself and logged it as an open item, but it's a reminder that policy drifts from practice the moment you stop checking.
 
-## SOBOK — a bakery that stopped before it sold
+## SOBOK — a bakery that stopped before it sold {#sobok}
 <div class="tags"><span class="tag">Regulatory compliance</span><span class="tag">Cost model</span><span class="tag">Controls</span><span class="tag">Google Sheets</span></div>
 
 **What it is.** A pickup-only home bakery in Toronto making financiers with Korean ingredients. 12 orders from 11 customers across two pre-order rounds in May–June 2026, 9 products.
