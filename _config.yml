@@ -1,0 +1,8 @@
+title: Jiyoung Min
+description: Supply chain student at York University heading into security governance, risk and compliance. Notes on building and running things safely.
+url: https://judy-m-l.github.io
+author: Jiyoung Min
+permalink: /posts/:title/
+markdown: kramdown
+plugins: [jekyll-feed]
+exclude: [README.md]
