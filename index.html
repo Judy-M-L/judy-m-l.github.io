@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jiyoung Min</title>
+<meta name="description" content="Jiyoung Min — Supply Chain Management student at York University, founder of SEED Toronto, building toward cybersecurity governance, risk and compliance.">
+<style>
+  :root {
+    --bg: #fafaf8; --fg: #1a1f2e; --muted: #5b6275; --line: #e3e4e8;
+    --accent: #1f2a5c; --accent-soft: #e8ebf6; --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1320; --fg: #e9eaf0; --muted: #9ba1b5; --line: #262b3d;
+      --accent: #9fb0ff; --accent-soft: #1b2140; --card: #161b2c;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.6 -apple-system, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+
+  nav {
+    position: sticky; top: 0; background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); z-index: 10;
+  }
+  nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 56px; }
+  nav .name { font-weight: 700; letter-spacing: -0.01em; white-space: nowrap; }
+  nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; font-size: 15px; }
+  nav ul a { color: var(--muted); }
+  nav ul a:hover { color: var(--fg); text-decoration: none; }
+
+  header { padding: 96px 0 64px; }
+  .eyebrow { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+  h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.05; margin: 12px 0 18px; letter-spacing: -0.03em; }
+  .lede { font-size: 20px; color: var(--muted); max-width: 640px; margin: 0; }
+  .cta { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 15px;
+    border: 1px solid var(--accent); color: var(--accent);
+  }
+  .btn.primary { background: var(--accent); color: var(--bg); }
+  .btn:hover { text-decoration: none; opacity: .9; }
+
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin: 0 0 28px; }
+  h3 { font-size: 20px; margin: 0; letter-spacing: -0.01em; }
+  .role { color: var(--muted); font-size: 15px; margin: 2px 0 10px; }
+  .item { display: grid; grid-template-columns: 150px 1fr; gap: 20px; padding: 24px 0; border-top: 1px solid var(--line); }
+  .item:first-of-type { border-top: 0; padding-top: 0; }
+  .when { color: var(--muted); font-size: 14px; padding-top: 4px; }
+  ul.b { margin: 0; padding-left: 18px; }
+  ul.b li { margin: 6px 0; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .tag { font-size: 12.5px; background: var(--accent-soft); color: var(--accent); padding: 3px 9px; border-radius: 999px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  .card h3 { font-size: 17px; }
+  .card p { margin: 8px 0 0; font-size: 15px; color: var(--muted); }
+  .card.next { border-style: dashed; }
+
+  .skills dt { font-weight: 600; margin-top: 14px; }
+  .skills dd { margin: 4px 0 0; color: var(--muted); }
+
+  footer { padding: 48px 0 64px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
+  footer .links { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 10px; }
+
+  @media (max-width: 640px) {
+    .item { grid-template-columns: 1fr; gap: 6px; }
+    nav ul { gap: 14px; font-size: 14px; }
+    header { padding: 64px 0 48px; }
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <span class="name">Jiyoung Min</span>
+  <ul>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<header><div class="wrap">
+  <div class="eyebrow">Supply Chain Management · York University</div>
+  <h1>I build things that run,<br>then make sure they run safely.</h1>
+  <p class="lede">
+    Founder of <a href="https://seedtoronto.org">SEED Toronto</a> and a small bakery business.
+    I study supply chain management and am working toward cybersecurity governance,
+    risk and compliance, where operations and security meet.
+  </p>
+  <div class="cta">
+    <a class="btn primary" href="#projects">See my work</a>
+    <a class="btn" href="https://www.linkedin.com/in/jiyougmin/">LinkedIn</a>
+  </div>
+</div></header>
+
+<section id="about"><div class="wrap">
+  <h2>About</h2>
+  <p>
+    I found out about co-op, scholarships and exchange programs too late and didn't know who to ask,
+    so I built SEED Toronto: a student-benefits platform I launched on my own with AI coding tools,
+    including school-email verification, a members-only board and the privacy rules behind it.
+    Running SOBOK, my bakery, taught me operations from the ledger up.
+  </p>
+  <p>
+    What ties it together is the same question: how do you design a system so it keeps working
+    when real people, real money and real data go through it? That's why I'm heading into security
+    GRC: I already understand how businesses and supply chains operate, and I want to be the person
+    who makes them resilient.
+  </p>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+
+  <div class="item">
+    <div class="when">Sep 2026 – Present<br>Toronto</div>
+    <div>
+      <h3>SEED Toronto</h3>
+      <div class="role">Founder &amp; President</div>
+      <ul class="b">
+        <li>Launched <a href="https://seedtoronto.org">seedtoronto.org</a>, a Korean/English student-benefits platform built with AI coding tools on Next.js, Postgres and Vercel; 13 school-email-verified members by Oct 2026.</li>
+        <li>Designed the platform's access and privacy controls: hashed passwords, login rate limits, verified-only posting, moderation tools and a bilingual privacy policy.</li>
+        <li>Consolidated official benefits from 22 Ontario and Quebec post-secondary institutions and 26 government programs, verifying every link against its official source.</li>
+        <li>Built a 3-person executive team and 37 governance, finance and partnership documents, including a constitution, founders' agreement and sponsorship package.</li>
+      </ul>
+      <div class="tags"><span class="tag">Access control</span><span class="tag">Privacy policy</span><span class="tag">Next.js</span><span class="tag">Governance</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="when">Apr 2026 – Present<br>Toronto</div>
+    <div>
+      <h3>SOBOK Bakery</h3>
+      <div class="role">Founder &amp; Operations Lead</div>
+      <ul class="b">
+        <li>Cut admin time per pre-order round from ~3 hours to 30 minutes by consolidating 3 ledgers into one automated workbook that calculates costs, inventory and settlement from a single batch-size entry.</li>
+        <li>Generated ~$420 CAD from 12 orders across 2 pre-order rounds after developing 9 products with Korean ingredients.</li>
+        <li>Built a unit cost model including labour; it showed a ~$14 cash margin per $20 set fell to ~$3 after labour, so volume, not price, was the lever.</li>
+      </ul>
+      <div class="tags"><span class="tag">Operations</span><span class="tag">Cost analysis</span><span class="tag">Google Apps Script</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="when">Sep 2024 – Jan 2026<br>Toronto</div>
+    <div>
+      <h3>Korean Student Association at York University</h3>
+      <div class="role">Event Planning Team Lead (Sep 2025 – Jan 2026) · Team Member (Sep 2024 – Aug 2025)</div>
+      <ul class="b">
+        <li>Owned end-to-end planning for every event: budgets, KPI tracking and delegation. Ran 4 events in one term, each 40+ attendees and all profitable, closing with a $1,000 surplus.</li>
+        <li>Led the year-end event, 60+ attendees and $2,000 in revenue, and coordinated requests across 17 stakeholders.</li>
+      </ul>
+      <div class="tags"><span class="tag">Leadership</span><span class="tag">Budgeting</span><span class="tag">Stakeholders</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="when">Jul – Aug 2025<br>Seoul</div>
+    <div>
+      <h3>Coupang</h3>
+      <div class="role">Fulfillment &amp; Logistics Operations Support</div>
+      <ul class="b">
+        <li>Sorted, tracked and routed inventory across multiple SKU categories using scanning and WMS workflows in a high-volume e-commerce fulfillment centre, under time-sensitive dispatch deadlines.</li>
+      </ul>
+      <div class="tags"><span class="tag">WMS</span><span class="tag">Inventory</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="when">2024 – 2025<br>Seoul</div>
+    <div>
+      <h3>Lotte Hotels and Resorts</h3>
+      <div class="role">Private Dining Server, Signiel Club · Front-of-House, STAY at Signiel</div>
+      <ul class="b">
+        <li>Rehired for a second seasonal contract based on performance; served 100+ guests a day and coordinated with 30+ front-of-house and culinary staff.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://seedtoronto.org">seedtoronto.org</a></h3>
+      <p>Student-benefits platform with email verification, members-only board and admin console. Built solo with Claude Code, Codex and Lovable; deployed on Vercel.</p>
+      <div class="tags"><span class="tag">Next.js</span><span class="tag">Postgres</span><span class="tag">Auth</span></div>
+    </div>
+    <div class="card">
+      <h3>Delivery Delay Risk Prediction</h3>
+      <p>Python classification on 180,519 supply chain order records. Compared Logistic Regression, Decision Tree and Random Forest; grouped train/test split to prevent leakage; tuned Decision Tree to 64.3% recall, 0.696 F1.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">scikit-learn</span></div>
+    </div>
+    <div class="card">
+      <h3>SOBOK Operations Workbook</h3>
+      <p>One workbook replacing three ledgers: order, purchase and production entries drive costs, inventory for 22 ingredients and monthly settlement. Pre-order forms generated with Google Apps Script.</p>
+      <div class="tags"><span class="tag">Sheets</span><span class="tag">Apps Script</span><span class="tag">Automation</span></div>
+    </div>
+    <div class="card">
+      <h3>Salesforce CRM Automation</h3>
+      <p>CRM prototype for investor-pitch management: custom objects, validation rules, reports, dashboards, automated lead assignment and email notifications.</p>
+      <div class="tags"><span class="tag">Salesforce</span><span class="tag">Workflow</span></div>
+    </div>
+    <div class="card next">
+      <h3>Supply Chain Cyber Risk Framework</h3>
+      <p>In progress. A third-party and supply chain cyber risk assessment framework based on NIST CSF, applied to a real small-business supply chain.</p>
+      <div class="tags"><span class="tag">GRC</span><span class="tag">NIST CSF</span><span class="tag">Coming 2027</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Technical</dt>
+    <dd>Python (pandas), SQL, Salesforce CRM, Google Apps Script, Excel (pivot tables, VLOOKUP), Google Sheets, Power BI (learning), C</dd>
+    <dt>AI-assisted development</dt>
+    <dd>Claude Code, Codex, Lovable — shipped a production web platform and an operations workbook with them</dd>
+    <dt>Operations &amp; governance</dt>
+    <dd>Inventory management, WMS, cost analysis, process improvement, project and event planning, organizational governance documents</dd>
+    <dt>Security (building)</dt>
+    <dd>Application access controls and privacy policy design (SEED); CompTIA Security+ in preparation</dd>
+    <dt>Certifications &amp; languages</dt>
+    <dd>ASCM Supply Chain Technology Certificate (in progress) · ASCM Professional Member · Korean (native), English (professional)</dd>
+  </dl>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <h2>Education</h2>
+  <div class="item">
+    <div class="when">Expected May 2028</div>
+    <div><h3>York University</h3><div class="role">Bachelor of Commerce (Honours), Supply Chain Management</div></div>
+  </div>
+  <div class="item">
+    <div class="when">Summer 2026</div>
+    <div><h3>Yonsei University</h3><div class="role">International Summer School: Operations, Entrepreneurship &amp; Machine Learning</div></div>
+  </div>
+</div></section>
+
+<footer id="contact"><div class="wrap">
+  <div class="links">
+    <a href="mailto:judy383m@gmail.com">judy383m@gmail.com</a>
+    <a href="https://www.linkedin.com/in/jiyougmin/">LinkedIn</a>
+    <a href="https://github.com/Judy-M-L">GitHub</a>
+    <a href="https://seedtoronto.org">SEED Toronto</a>
+  </div>
+  <div>Toronto, ON · © 2026 Jiyoung Min</div>
+</div></footer>
+
+</body>
+</html>
