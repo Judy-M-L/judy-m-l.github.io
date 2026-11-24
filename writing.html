@@ -1,17 +1,31 @@
 ---
 layout: default
-title: Writing
+title: Notes
 permalink: /writing/
 ---
-<h1>Writing</h1>
-<p class="lede">Notes from studying for Security+ and running two small organisations. If I can't explain it with my bakery or my platform, I don't understand it yet.</p>
+<h1>Notes</h1>
+<p class="lede">Study notes on supply chain and SQL, written as I go. If I can't explain it with my bakery or my platform, I don't understand it yet.</p>
 
-<div class="label">All posts</div>
+{% assign notes = site.posts | where_exp: "p", "p.tags contains 'study'" %}
+<div class="label">Study notes</div>
 <ul class="list">
-{% for post in site.posts %}
+{% for post in notes %}
+  <li>
+    <a class="t" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <div class="d">{{ post.date | date: "%b %-d, %Y" }}{% assign topics = post.tags | where_exp: "t", "t != 'study'" %}{% if topics.size > 0 %} · {{ topics | join: ", " }}{% endif %}{% if post.summary %} · {{ post.summary }}{% endif %}</div>
+  </li>
+{% endfor %}
+{% if notes.size == 0 %}
+  <li><div class="d">No notes yet. The first ones are on the way.</div></li>
+{% endif %}
+</ul>
+
+<div class="label">Essays</div>
+<ul class="list">
+{% for post in site.posts %}{% unless post.tags contains 'study' %}
   <li>
     <a class="t" href="{{ post.url | relative_url }}">{{ post.title }}</a>
     <div class="d">{{ post.date | date: "%b %-d, %Y" }}{% if post.summary %} · {{ post.summary }}{% endif %}</div>
   </li>
-{% endfor %}
+{% endunless %}{% endfor %}
 </ul>

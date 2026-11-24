@@ -5,7 +5,7 @@ title: Jiyoung Min
 <h1 class="cursor">Jiyoung Min</h1>
 <p class="alt">민지영</p>
 
-<p class="lede">Supply chain student at York University, moving into security governance, risk and compliance. I build small things, then write down the rules that keep them running.</p>
+<p class="lede">Supply chain management student at York University. This is my study blog: notes on what I'm learning, and on the two small organisations I run.</p>
 
 <div class="label">Elsewhere</div>
 <div class="icons">
@@ -15,20 +15,41 @@ title: Jiyoung Min
   <a href="mailto:judy383m@gmail.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></a>
 </div>
 
+<div class="label">Studying now</div>
+<ul class="list">
+  <li><span class="t">Supply chain management</span><div class="d">York University, BCom. This term's textbook is Chopra &amp; Meindl.</div></li>
+  <li><span class="t">ASCM Supply Chain Technology Certificate</span><div class="d">In progress, through January 2027.</div></li>
+  <li><span class="t">SQL</span><div class="d">Basics, with SQLite.</div></li>
+</ul>
+
+{% assign notes = site.posts | where_exp: "p", "p.tags contains 'study'" %}
+<div class="label">Study notes</div>
+<ul class="list">
+{% for post in notes limit: 5 %}
+  <li>
+    <a class="t" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <div class="d">{{ post.date | date: "%b %-d, %Y" }}{% if post.summary %} · {{ post.summary }}{% endif %}</div>
+  </li>
+{% endfor %}
+{% if notes.size == 0 %}
+  <li><div class="d">No notes yet. The first ones are on the way.</div></li>
+{% endif %}
+</ul>
+<a class="more" href="{{ '/writing/' | relative_url }}">All notes →</a>
+
 <div class="label">Things I run</div>
 <ul class="list">
-  <li><a class="t" href="https://seedtoronto.org">SEED Toronto</a><div class="d">Student-benefits hub with verified accounts. 208 institutions, 125 programs, one privacy policy I wrote myself.</div></li>
-  <li><a class="t" href="{{ '/work/' | relative_url }}#sobok">SOBOK</a><div class="d">A financier bakery and the spreadsheet, form and regulatory checklist that run it.</div></li>
+  <li><a class="t" href="{{ '/work/' | relative_url }}#seed">SEED Toronto</a><div class="d">Student-benefits hub with verified accounts. 208 institutions, 125 programs, and the process that keeps the data correct.</div></li>
+  <li><a class="t" href="{{ '/work/' | relative_url }}#sobok">SOBOK</a><div class="d">A financier bakery and the one workbook that runs its orders, inventory and costs.</div></li>
   <li><a class="t" href="{{ '/work/' | relative_url }}">All work →</a></li>
 </ul>
 
-<div class="label">Writing</div>
+<div class="label">Essays</div>
 <ul class="list">
-{% for post in site.posts limit: 5 %}
+{% for post in site.posts %}{% unless post.tags contains 'study' %}
   <li>
     <a class="t" href="{{ post.url | relative_url }}">{{ post.title }}</a>
     <div class="d">{{ post.date | date: "%b %Y" }}</div>
   </li>
-{% endfor %}
+{% endunless %}{% endfor %}
 </ul>
-<a class="more" href="{{ '/writing/' | relative_url }}">All writing →</a>

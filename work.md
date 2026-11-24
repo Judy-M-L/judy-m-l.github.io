@@ -5,7 +5,7 @@ permalink: /work/
 ---
 # Work
 
-Two organisations I started and still run, taken apart by aspect. Each section opens into the same four parts: what it is, the problem, what I decided, and what I'd do differently. The "why" for each lives in [Writing](/writing/).
+Two organisations I started and still run, taken apart by aspect. Each section opens into the same four parts: what it is, the problem, what I decided, and what I'd do differently. The "why" for each lives in [Notes](/writing/).
 
 ## SEED Toronto {#seed}
 <div class="tags"><span class="tag">Sep 2026 –</span><span class="tag">Sole founder</span><span class="tag">seedtoronto.org</span></div>
@@ -13,7 +13,28 @@ Two organisations I started and still run, taken apart by aspect. Each section o
 A Korean/English hub of official student benefits for students in Canada — 208 institutions, 125 government programs — with school-email-verified accounts, a members-only board and a 5-person team. I built the site alone with AI coding tools and wrote the rules the organisation runs on.
 
 <details markdown="1">
-<summary>GRC <span class="sub">— rules, privacy, risk</span></summary>
+<summary>Operations / SCM <span class="sub">— data, verification, process</span></summary>
+
+<div class="h">What it is</div>
+A dataset of official benefits that has to be correct, a process for keeping it correct, and an approval flow for how the organisation spends and decides.
+
+<div class="h">The problem</div>
+"The information schools give out is so vague... checking every one of these links is nothing like easy." Every school's page is different, half the programs have eligibility rules buried three clicks deep, and the content changes without notice. A teammate suggested pulling data automatically from school APIs. I asked: so I have to go fix every change by hand anyway?
+
+<div class="h">What I decided</div>
+- Official sources only. Blogs, Reddit and AI answers are leads, not evidence.
+- No automatic content changes. A wrong deadline is worse than a stale one, so the code detects and a person fixes.
+- A daily job checks one-seventh of all official links and hashes each page's text to catch silent changes. A report lands in SEED's inbox every Monday. Two schools block bots, so they're checked by hand each term. One false "broken" flag turned out to be a misconfigured certificate on the school's side; I fixed the check rather than the data.
+- Re-check cadence: deadline-based opportunities weekly, ongoing services quarterly, broken links immediately.
+- Approval flow: department plan → finance budget check → President sign-off.
+- Scale went 1 school → 7 → 12 → 22 → 209 across 13 provinces and territories in a month, and the verification process is what let it.
+
+<div class="h">What I'd do differently</div>
+The first user feedback was blunt: "it was only links, information you could find with ChatGPT." I'd been building a directory when students wanted other students' experiences. I cut dead features the same day and pivoted toward a community board, but I'd ask users earlier next time.
+</details>
+
+<details markdown="1">
+<summary>Rules and compliance <span class="sub">— rules, privacy, risk</span></summary>
 
 <div class="h">What it is</div>
 A privacy policy aligned to PIPEDA and CASL, an access-control policy, an incident response plan, a finance rulebook with segregation of duties, and the controls in the code that back them up.
@@ -56,27 +77,6 @@ Share more, earlier. I kept verbal agreements to myself because they weren't sig
 </details>
 
 <details markdown="1">
-<summary>Operations / SCM <span class="sub">— data, verification, process</span></summary>
-
-<div class="h">What it is</div>
-A dataset of official benefits that has to be correct, a process for keeping it correct, and an approval flow for how the organisation spends and decides.
-
-<div class="h">The problem</div>
-"The information schools give out is so vague... checking every one of these links is nothing like easy." Every school's page is different, half the programs have eligibility rules buried three clicks deep, and the content changes without notice. A teammate suggested pulling data automatically from school APIs. I asked: so I have to go fix every change by hand anyway?
-
-<div class="h">What I decided</div>
-- Official sources only. Blogs, Reddit and AI answers are leads, not evidence.
-- No automatic content changes. A wrong deadline is worse than a stale one, so the code detects and a person fixes.
-- A daily job checks one-seventh of all official links and hashes each page's text to catch silent changes. A report lands in SEED's inbox every Monday. Two schools block bots, so they're checked by hand each term. One false "broken" flag turned out to be a misconfigured certificate on the school's side; I fixed the check rather than the data.
-- Re-check cadence: deadline-based opportunities weekly, ongoing services quarterly, broken links immediately.
-- Approval flow: department plan → finance budget check → President sign-off.
-- Scale went 1 school → 7 → 12 → 22 → 209 across 13 provinces and territories in a month, and the verification process is what let it.
-
-<div class="h">What I'd do differently</div>
-The first user feedback was blunt: "it was only links, information you could find with ChatGPT." I'd been building a directory when students wanted other students' experiences. I cut dead features the same day and pivoted toward a community board, but I'd ask users earlier next time.
-</details>
-
-<details markdown="1">
 <summary>Building <span class="sub">— AI tools, code, deployment</span></summary>
 
 <div class="h">What it is</div>
@@ -103,7 +103,27 @@ I'm the only person who can deploy. That's the top risk in my own risk register,
 A small bakery making financiers with Korean flavours — mugwort, black sesame, injeolmi, smoked cheese. 12 orders from 11 customers in two pre-order rounds, 9 products, one workbook that runs the whole thing. It started as GUUM, a cost-only "sharing" project, and became a business I'm trying to run properly.
 
 <details markdown="1">
-<summary>GRC <span class="sub">— regulation, consent, saying no to shortcuts</span></summary>
+<summary>Operations / SCM <span class="sub">— ledger, inventory, round economics</span></summary>
+
+<div class="h">What it is</div>
+Three ledgers became one Google Sheets workbook: orders flow in from the form, and recipes, ingredient inventory, packaging, overhead, cost and monthly settlement calculate from them. Yellow cells are inputs, white cells are formulas, and you don't type in white.
+
+<div class="h">The problem</div>
+"The quantities I make are always different... there's no 'sell this many, earn this much.'" I was adding up each order by hand, buying ingredients by feel, and had no idea whether a $20 set made money.
+
+<div class="h">What I decided</div>
+- Counted physical stock by weighing containers minus tare, then let the sheet do it: remaining = opening + purchases − used − waste, with a reorder flag.
+- Korean-won purchases entered raw and converted by one exchange-rate cell. Prices recorded before discount. Real cash spend kept separate from standard cost. "The ledger is the latest; if anything disagrees, fix it to match the ledger."
+- Built the cost model with my own labour in it: a $20 set earned $14.25 cash but about $3 once I valued my time at $18/hour. So volume per round, not price, is the lever. Break-even is 7–9 sets; below that, cancel the round and refund.
+- Round rules: cutoff noon the day before, payment within 24 hours, 20-box cap, pickups along one subway line.
+- Pricing I set myself: 6-piece set $30, singles $4.50–5.00, benchmarked against a survey of 100 Toronto bakeries.
+
+<div class="h">What I'd do differently</div>
+The "3 hours to 30 minutes" I used to say about admin time was an estimate, not a measurement. The next round gets a stopwatch. My own planning doc says not to promise savings I haven't measured, and I should have listened to it sooner.
+</details>
+
+<details markdown="1">
+<summary>Rules and compliance <span class="sub">— regulation, consent, saying no to shortcuts</span></summary>
 
 <div class="h">What it is</div>
 A regulatory checklist of ten items, consent built into the order form, and a few decisions about what I won't do.
@@ -141,26 +161,6 @@ A decision log with eighteen entries, each with who decided and why, and a two-A
 
 <div class="h">What I'd do differently</div>
 I printed business cards and insert cards before the flavour list and storage instructions were final. The cards say five flavours and "refrigerated"; the truth is six and "frozen." Paper is a release, and I shipped it early.
-</details>
-
-<details markdown="1">
-<summary>Operations / SCM <span class="sub">— ledger, inventory, round economics</span></summary>
-
-<div class="h">What it is</div>
-Three ledgers became one Google Sheets workbook: orders flow in from the form, and recipes, ingredient inventory, packaging, overhead, cost and monthly settlement calculate from them. Yellow cells are inputs, white cells are formulas, and you don't type in white.
-
-<div class="h">The problem</div>
-"The quantities I make are always different... there's no 'sell this many, earn this much.'" I was adding up each order by hand, buying ingredients by feel, and had no idea whether a $20 set made money.
-
-<div class="h">What I decided</div>
-- Counted physical stock by weighing containers minus tare, then let the sheet do it: remaining = opening + purchases − used − waste, with a reorder flag.
-- Korean-won purchases entered raw and converted by one exchange-rate cell. Prices recorded before discount. Real cash spend kept separate from standard cost. "The ledger is the latest; if anything disagrees, fix it to match the ledger."
-- Built the cost model with my own labour in it: a $20 set earned $14.25 cash but about $3 once I valued my time at $18/hour. So volume per round, not price, is the lever. Break-even is 7–9 sets; below that, cancel the round and refund.
-- Round rules: cutoff noon the day before, payment within 24 hours, 20-box cap, pickups along one subway line.
-- Pricing I set myself: 6-piece set $30, singles $4.50–5.00, benchmarked against a survey of 100 Toronto bakeries.
-
-<div class="h">What I'd do differently</div>
-The "3 hours to 30 minutes" I used to say about admin time was an estimate, not a measurement. The next round gets a stopwatch. My own planning doc says not to promise savings I haven't measured, and I should have listened to it sooner.
 </details>
 
 <details markdown="1">
